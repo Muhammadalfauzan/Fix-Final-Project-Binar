@@ -1,0 +1,253 @@
+<resources>
+    <string name="app_name">Final Project Binar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="akun">Akun</string>
+    <string name="ubah_password">Ubah Password</string>
+    <string name="riwayat_pembayaran">Riwayat Pembayaran</string>
+    <string name="hint_search_textbox">Cari Kursus Terbaik..</string>
+    <string name="kategori">Kategori</string>
+    <string name="lihat_semua">Lihat Semua</string>
+    <string name="ui_ux_design">UI/UX Design</string>
+    <string name="kursus_populer">Kursus Populer</string>
+    <string name="all">All</string>
+    <string name="data_science">Data Science</string>
+    <string name="course_cover">Course Cover</string>
+    <string name="modul">Modul</string>
+    <string name="intermediate_level">Intermediate Level</string>
+
+    <string name="belajar">SkillHub</string>
+    <string name="sudah_punya_akun">Sudah Punya akun?</string>
+    <string name="masuk_di_sini">Masuk Di Sini</string>
+    <string name="daftar">Daftar</string>
+    <string name="dapatkan_potongan_50_selama_bulan_maret">Dapatkan Potongan 50% selama Bulan Maret!</string>
+    <string name="syarat_dan_ketentuan_berlaku">Syarat dan Ketentuan berlaku!</string>
+    <string name="_2_maret_12_00">2 Maret, 12:00</string>
+    <string name="promosi">Promosi</string>
+    <string name="todo">TODO</string>
+    <string name="bayar_dan_ikuti_kelas_selamanya">Bayar dan Ikuti Kelas Selamanya</string>
+
+    <string-array name="splash_desk">
+        <item>dari Pengalaman terbaik</item>
+        <item>dari Praktisi Terbaik</item>
+        <item>darimana saja</item>
+    </string-array>
+
+    <string-array name="splash_img">
+        <item>@drawable/project_planning</item>
+        <item>@drawable/analytics</item>
+        <item>@drawable/share_location</item>
+    </string-array>
+
+    <string name="topik_kelas">Topik Kelas</string>
+    <string name="filter">Filter</string>
+    <string name="premium">Premium</string>
+    <string name="gratis">Gratis</string>
+
+    <!--Hanya Data Dummy Hapus Jika Tidak Digunakan-->
+    <string-array name="nama">
+        <item>Belajar Membuat UI/UX dengan Figma</item>
+        <item>Pengenalan Android Development</item>
+        <item>Membuat API dan Membuat Dokumentasinya </item>
+        <item>Pengenalan Design Pattern </item>
+    </string-array>
+    <string-array name="image">
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/profile</item>
+    </string-array>
+    <string-array name="author">
+        <item>Napoleon</item>
+        <item>Uzumaki Naruto</item>
+        <item>Soeharto</item>
+        <item>Puan Maharani</item>
+    </string-array>
+    <string-array name="level">
+        <item>Intermidate</item>
+        <item>Beginner</item>
+        <item>Beginner</item>
+        <item>Intermidate</item>
+    </string-array>
+    <string-array name="rating">
+        <item>4.9</item>
+        <item>3.8</item>
+        <item>4.0</item>
+        <item>5.0</item>
+    </string-array>
+    <string-array name="totalModul">
+        <item>10</item>
+        <item>8</item>
+        <item>14</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="totalMenit">
+        <item>80</item>
+        <item>100</item>
+        <item>60</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="premium">
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="category">
+        <item>UI/UX</item>
+        <item>Android Engineering</item>
+        <item>FullStack Website</item>
+        <item>UI/UX</item>
+    </string-array>
+    <!--Hanya Data Dummy Hapus Jika Tidak Digunakan-->
+
+
+    <string-array name="fragment_array">
+        <item>@layout/fragment_bank</item>
+        <item>@layout/fragment_credit_card</item>
+    </string-array>
+    <string name="title_activity_payment">PaymentActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+    <string name="card_number">Card Number</string>
+    <string name="transaksi_pembayaran_kelas_premium_berhasil">Transaksi pembayaran kelas premium berhasil!</string>
+    <string name="e_receipt_telah_dikiriimkan_ke_email">E-receipt telah dikirimkan ke email.</string>
+    <string name="requirement">Mempunyai akun Figma atau Install Adobe XD Menggunakan internet minimal kecepatan 2Mbps Belajar di tempat yang nyaman</string>
+    <string name="ikuti_kelas">Ikuti Kelas</string>
+    <string name="persiapkan_hal_berikut_untuk_belajar_yang_maksimal">Persiapkan hal berikut untuk belajar yang maksimal:</string>
+    <string name="onboarding">Onboarding...</string>
+    <string name="kembali_ke_beranda">Kembali ke Beranda</string>
+    <string name="mulai_belajar">Mulai Belajar</string>
+    <string name="mulai_kelas">Mulai Kelas</string>
+    <string name="selamat">Selamat!</string>
+    <string name="beranda">Beranda</string>
+    <string name="notifikasi">Notifikasi</string>
+    <string name="kelas">Kelas</string>
+    <string name="kursus">Kursus</string>
+    <string name="version_1_1_0">Version 1.1.0</string>
+    <string name="rp_387_390">Rp 387,390</string>
+    <string name="belajar_web_designer_dengan_figma">Belajar Web Designer dengan Figma</string>
+    <string name="angela_doe">Angela Doe</string>
+    <string name="ppn_11">PPN 11%</string>
+    <string name="total_bayar">Total Bayar</string>
+    <string name="rp_38_390">Rp 38,390</string>
+    <string name="rp_349_000">Rp 349,000</string>
+    <string name="harga">Harga</string>
+    <string name="belum_punya_akun">Belum Punya Akun?</string>
+    <string name="daftar_disini">Daftar disini</string>
+    <string name="masuk_tanpa_login">Masuk Tanpa Login</string>
+    <string name="lupa_kata_sandi">Lupa Kata Sandi</string>
+    <string name="buat_password">Buat Password</string>
+    <string name="menampilkan">Menampilkan</string>
+
+
+    <string name="back">Back</string>
+    <string name="masukkan_otp">Masukkan OTP</string>
+    <string name="desc_otp">Ketik 6 digit kode yang dikirimkan</string>
+    <string name="ke">ke</string>
+    <string name="contohEmail">contohEmail@gmail.com</string>
+    <string name="kirim_ulang_otp">kirim ulang OTP dalam </string>
+    <string name="durasi"> 59 </string>
+    <string name="detik"> detik </string>
+    <string name="minta_otp_baru"> Minta kode baru via email </string>
+    <string name="Masuk"> Masuk </string>
+    <string name="masuk_disini"> Masuk disini </string>
+    <string name="regis_berhasil"> Registrasi \n Berhasil!  </string>
+    <string name="succes"> Succes </string>
+    <string name="kelas_lainnya">Kelas Lainnya</string>
+    <string name="intro_to_basic_of_user_interaction_design">Intro to Basic of User Interaction Design</string>
+    <string name="beginner_level">Beginner Level</string>
+    <string name="_45_menit">45 Menit</string>
+    <string name="join_grup_telegram">Join Grup Telegram</string>
+    <string name="tentang_kelas">Tentang Kelas</string>
+    <string name="kelas_ini_ditunjukan_untuk">Kelas Ini Ditunjukan Untuk</string>
+
+    <string name="list_requirement">
+        1. Anda yang ingin memahami poin penting design system\n
+        2. Anda yang ingin membantu perusahaan lebih optimal dalam membuat design produk\n
+        3. Anda yang ingin latihan membangun design system\n
+        4. Anda yang ingin latihan membangun design system
+    </string>
+
+    <string name="description">
+        Design system adalah kumpulan komponen design, code, ataupun dokumentasi yang dapat digunakan sebagai
+        panduan utama yang memunginkan designer serta developer memiliki lebih banyak kontrol atas berbagai platform.
+        Dengan hadirnya design system, dapat menjaga konsistensi tampilan user interface dan meningkatkan user experience
+        menjadi lebih baik. Disisi bisnis, design system sangat berguna dalam menghemat waktu dan biaya ketika mengembangkan
+        suatu produk.\n
+        Bersama mentor XXX, kita akan mempelajari design system dari mulai manfaat, alur kerja pembuatannya,
+        tools yang digunakan, hingga pada akhirnya, kita akan membuat MVP dari design system. Selain itu, mentor juga
+        akan menjelaskan berbagai resource yang dibutuhkan untuk mencari inspirasi mengenai design system.\n
+        Kelas ini sesuai untuk Anda yang ingin memahami apa itu design system. Tidak hanya ditujukan untuk UI/UX Designer
+        ataupun Developer, kelas ini sangat sesuai untuk stakeholder lain agar dapat memudahkan tim dalam bekerja sama.
+        Yuk segera daftar dan kami tunggu di kelas ya!
+    </string>
+    <string name="kelas_berjalan">Kelas Berjalan</string>
+    <string name="maaf_anda_harus_login_terlebih_dahulu">Maaf, Anda harus login terlebih dahulu</string>
+    <string name="oops">Oops!</string>
+    <string name="beli_sekarang">Beli Sekarang</string>
+    <string name="masuk">Masuk</string>
+
+    <string name="wrongMessage">Uh oh, something went wrong!</string>
+    <string name="harap_validasi_sebelum_12_30_30">Harap validasi sebelum 12:30:30</string>
+    <string name="chapter_1_pendahuluan">Chapter 1 - Pendahuluan</string>
+    <string name="_60_menit">60 Menit</string>
+    <string name="_1">1</string>
+    <string name="tujuan_mengikuti_kelas_design_system">Tujuan Mengikuti Kelas Design System</string>
+    <string name="materi_belajar">Materi Belajar</string>
+    <string name="not_found">Not Found!</string>
+    <string name="login_sekarang">Login Sekarang</string>
+    <string name="berhasil">Berhasil</string>
+    <string name="registrasi">Registrasi</string>
+    <string name="selangkah_lagi_menuju">Selangkah lagi menuju</string>
+    <string name="kelas_premium">Kelas Premium</string>
+    <string name="_4_7">4.7</string>
+    <string name="simpan_profil_saya">Simpan Profil Saya</string>
+    <string name="email">Email</string>
+    <string name="periksa_email_anda_jika_tidak_ada_email_masuk_coba_untuk_periksa_di_folder_spam">Periksa email anda, Jika tidak ada email masuk coba untuk periksa di folder spam</string>
+    <string name="konfirmasi">Konfirmasi</string>
+    <string name="anda_belum_memiliki_kelas_aktif">Anda belum memiliki kelas aktif</string>
+    <string name="anda_tidak_memilki_notifikasi">Anda tidak memilki notifikasi</string>
+    <string name="lanjutkan_pembayaran">Lanjutkan Pembayaran</string>
+    <string name="anda_tidak_memiliki_riwayat_pembayaran">Anda tidak memiliki riwayat pembayaran</string>
+</resources>

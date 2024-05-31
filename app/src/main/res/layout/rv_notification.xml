@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="18dp"
+    android:paddingEnd="18dp"
+    android:paddingTop="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/iconNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_background"
+            android:padding="3dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/notifications_fill1_wght400_grad0_opsz24"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rvNotifcationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/promosi"
+            android:textColor="#51DACF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/iconNotification"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rvNotificationSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/dapatkan_potongan_50_selama_bulan_maret"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/iconNotification"
+            app:layout_constraintTop_toBottomOf="@id/rvNotifcationTitle"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/rvNotificationContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/syarat_dan_ketentuan_berlaku"
+            android:textColor="#8A8A8A"
+            android:textSize="10sp"
+            android:layout_marginTop="8dp"
+            tools:ignore="SmallSp"
+            app:layout_constraintStart_toEndOf="@id/iconNotification"
+            app:layout_constraintTop_toBottomOf="@id/rvNotificationSubTitle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rvNotificationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/_2_maret_12_00"
+                android:textColor="#8A8A8A"
+                tools:ignore="SmallSp"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/notificationElips"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/circle_background"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp" />
+
+</LinearLayout>
