@@ -8,44 +8,42 @@ import android.view.ViewGroup
 import com.example.finalprojectbinar.databinding.FragmentBottomSheetSuccessRegisterBinding
 import com.example.finalprojectbinar.util.Enum
 import com.example.finalprojectbinar.util.SharedPreferenceHelper
-import com.example.finalprojectbinar.view.ui.MainActivity
 import com.example.finalprojectbinar.view.ui.login.LoginActivity
-import com.example.finalprojectbinar.view.ui.register.VerifyPhoneActivity
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-class BottomSheetSuccessRegisterFragment : BottomSheetDialogFragment()  {
+class BottomSheetSuccessRegisterFragment : BottomSheetDialogFragment() {
 
     private var _binding: FragmentBottomSheetSuccessRegisterBinding? = null
     private val binding get() = _binding!!
-
-    private lateinit var pref: SharedPreferenceHelper
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentBottomSheetSuccessRegisterBinding.inflate(inflater, container, false)
+        SharedPreferenceHelper.init(requireContext()) // Initialize SharedPreferenceHelper
 
         binding.btnToLoginActivity.setOnClickListener {
-            pref.write(Enum.PREF_REGISTER.value, null)
-            dismiss()
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)
+            navigateToLogin()
         }
 
         binding.imageClose.setOnClickListener {
-            pref.write(Enum.PREF_REGISTER.value, null)
-            dismiss()
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)
+            navigateToLogin()
         }
+
         return binding.root
     }
 
+    private fun navigateToLogin() {
+        SharedPreferenceHelper.write(Enum.PREF_REGISTER.value, null)
+        dismiss()
+        val intent = Intent(requireActivity(), LoginActivity::class.java)
+        startActivity(intent)
+        requireActivity().finish() // Finish the current activity
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.finalprojectbinar.databinding.ActivityVerifyPhoneBinding
-
 import com.example.finalprojectbinar.util.Enum
 import com.example.finalprojectbinar.util.SharedPreferenceHelper
 import com.example.finalprojectbinar.util.Status
@@ -14,11 +13,10 @@ import com.example.finalprojectbinar.view.fragments.bottomsheets.BottomSheetSucc
 import com.example.finalprojectbinar.view.ui.login.LoginActivity
 import com.example.finalprojectbinar.viewmodel.MyViewModel
 import org.koin.android.ext.android.inject
-
-
 import androidx.lifecycle.Observer
 import com.example.finalprojectbinar.model.OTPRequest
-
+import java.text.SimpleDateFormat
+import java.util.*
 
 class VerifyPhoneActivity : AppCompatActivity() {
 
@@ -26,17 +24,16 @@ class VerifyPhoneActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
     private val viewModel: MyViewModel by inject()
-    private lateinit var pref: SharedPreferenceHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityVerifyPhoneBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        pref = SharedPreferenceHelper
+        SharedPreferenceHelper.init(this)
         val email = intent.getStringExtra(RegisterActivity.EMAIL)
         binding.emailTV.text = email
-        val tokenRegister = pref.read(Enum.PREF_REGISTER.value).toString()
+        val tokenRegister = SharedPreferenceHelper.read(Enum.PREF_REGISTER.value).toString()
 
         binding.ivBack.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
@@ -59,13 +56,14 @@ class VerifyPhoneActivity : AppCompatActivity() {
             viewModel.validateJWT("Bearer $tokenRegister").observe(this, Observer {
                 when (it.status) {
                     Status.SUCCESS -> {
-                        val message = it.data?.data?.expiredAt.toString()
-                        Log.d("MessageTEST", message)
-                        binding.validationReminder.text = message
+                        val expiredAt = it.data?.data?.expiredAt
+                        if (expiredAt != null) {
+                            showExpiryTime(expiredAt)
+                        }
+                        Toast.makeText(this@VerifyPhoneActivity, "JWT Valid", Toast.LENGTH_SHORT).show()
                     }
                     Status.ERROR -> {
-                        val message = it.data?.data?.expiredAt.toString()
-                        Toast.makeText(this@VerifyPhoneActivity, "Invalid credentials: $message", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@VerifyPhoneActivity, "Invalid JWT", Toast.LENGTH_SHORT).show()
                     }
                     Status.LOADING -> {
                         Log.d("LoadingTEST", "Loading")
@@ -80,18 +78,27 @@ class VerifyPhoneActivity : AppCompatActivity() {
         }
     }
 
-    private fun validateRegister(tokenRegister: String?, otp: String) {
-        val otpInt: Int = otp.toIntOrNull() ?: run {
-            Toast.makeText(this@VerifyPhoneActivity, "Invalid OTP format", Toast.LENGTH_SHORT).show()
-            return
-        }
+    private fun showExpiryTime(expiredAt: String) {
+        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+        sdf.timeZone = TimeZone.getTimeZone("UTC")
+        val expiryDate = sdf.parse(expiredAt)
+        val currentTime = Calendar.getInstance().time
+        val difference = expiryDate.time - currentTime.time
 
-        val otpRequest = OTPRequest(otpInt)
+        val minutes = (difference / (1000 * 60) % 60).toInt()
+        val seconds = (difference / 1000 % 60).toInt()
+
+        binding.validationReminder.text = "OTP expires in: $minutes minutes and $seconds seconds"
+    }
+
+    private fun validateRegister(tokenRegister: String?, otp: String) {
+        // Convert OTP to string if not already
+        val otpRequest = OTPRequest(otp)
 
         viewModel.validateRegister("Bearer $tokenRegister", otpRequest).observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
-                    val message = it.message ?: "Registration Successful"
+                    val message = it.data?.message ?: "Registration Successful"
                     Toast.makeText(this@VerifyPhoneActivity, message, Toast.LENGTH_SHORT).show()
                     val bottomSheetSuccessRegister = BottomSheetSuccessRegisterFragment()
                     bottomSheetSuccessRegister.show(supportFragmentManager, bottomSheetSuccessRegister.tag)
@@ -110,4 +117,8 @@ class VerifyPhoneActivity : AppCompatActivity() {
         })
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

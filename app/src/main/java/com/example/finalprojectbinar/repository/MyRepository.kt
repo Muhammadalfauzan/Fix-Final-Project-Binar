@@ -13,20 +13,22 @@ import com.example.finalprojectbinar.model.ProfileResponse
 import com.example.finalprojectbinar.model.RegisterRequest
 import com.example.finalprojectbinar.model.UpdatePasswordRequest
 import com.example.finalprojectbinar.model.UpdateProfileRequest
+import com.example.finalprojectbinar.model.ValidationRegisterResponse
+import retrofit2.Response
 
 class MyRepository() {
     private val apiService : APIService = APIClient.instance
-/*    suspend fun postLogin(loginRequest: LoginRequest) = apiService.login(loginRequest)
-    suspend fun postRegister(registerRequest: RegisterRequest) = apiService.register(registerRequest)
-    suspend fun validateJWT(tokenRegister: String?) = apiService.validationJWT(tokenRegister)
-    suspend fun validateRegister(tokenRegister: String?, otp: OTPRequest) = apiService.validateRegister(tokenRegister, otp)*/
+
 
     suspend fun postLogin(loginRequest: LoginRequest) = apiService.login(loginRequest)
     suspend fun postRegister(registerRequest: RegisterRequest) = apiService.register(registerRequest)
     suspend fun validateJWT(tokenRegister: String?) = apiService.validationJWT(tokenRegister)
     suspend fun validateRegister(tokenRegister: String?, otp: OTPRequest) = apiService.validateRegister(tokenRegister, otp)
 
+/*    suspend fun validateRegister(tokenRegister: String?, otp: OTPRequest): ValidationRegisterResponse {
+        return apiService.validateRegister("Bearer $tokenRegister", otp)
 
+    }*/
     // Categories
     suspend fun getCategories() = apiService.getListCategories()
 

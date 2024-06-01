@@ -1,5 +1,6 @@
 package com.example.finalprojectbinar.model
 
 data class OTPRequest(
-    val otp: Int
+    val otp: String
+
 )
